@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png">
-    <HelloWorld/> -->
+    <Header />
   </div>
 </template>
 
 <script>
+import Header from "./components/Header";
+
 export default {
-  name: "App"
-  // components: {
-  //   HelloWorld
-  // }
+  name: "App",
+  components: {
+    Header
+  }
 };
 </script>
 
@@ -22,5 +23,6 @@ export default {
   color: #2c3e50;
   width: 500px;
   height: 500px;
+  border: 1px solid black;
 }
 </style>
