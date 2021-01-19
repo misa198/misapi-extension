@@ -10,7 +10,7 @@ chrome.tabs.onActivated.addListener(function(info) {
         popup: "popup.html"
       });
       chrome.browserAction.setIcon({
-        path: "images/logo-16-disabled.png",
+        path: "images/icon-16-disabled.png",
         tabId: info.tabId
       });
     } else if (change.url.match(urlRegex) === null) {
@@ -20,7 +20,7 @@ chrome.tabs.onActivated.addListener(function(info) {
         popup: "popup.html"
       });
       chrome.browserAction.setIcon({
-        path: "images/logo-16-disabled.png",
+        path: "images/icon-16-disabled.png",
         tabId: info.tabId
       });
     } else {
@@ -30,7 +30,7 @@ chrome.tabs.onActivated.addListener(function(info) {
         popup: "index.html"
       });
       chrome.browserAction.setIcon({
-        path: "logo-16.png",
+        path: "images/icon-16.png",
         tabId: info.tabId
       });
     }
@@ -46,7 +46,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, change, tab) {
       popup: "popup.html"
     });
     chrome.browserAction.setIcon({
-      path: "images/logo-16-disabled.png",
+      path: "images/icon-16-disabled.png",
       tabId: tabId
     });
   } else {
@@ -54,6 +54,6 @@ chrome.tabs.onUpdated.addListener(function(tabId, change, tab) {
       tabId: tabId,
       popup: "index.html"
     });
-    chrome.browserAction.setIcon({ path: "logo-16.png", tabId: tabId });
+    chrome.browserAction.setIcon({ path: "images/icon-16.png", tabId: tabId });
   }
 });
