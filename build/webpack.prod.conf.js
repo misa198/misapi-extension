@@ -118,8 +118,16 @@ const webpackConfig = merge(baseWebpackConfig, {
         to: path.resolve(__dirname, "../dist/manifest.json")
       },
       {
+        from: path.resolve(__dirname, "../template/popup.html"),
+        to: path.resolve(__dirname, "../dist/popup.html")
+      },
+      {
         from: path.resolve(__dirname, "../template/images"),
         to: path.resolve(__dirname, "../dist/images")
+      },
+      {
+        from: path.resolve(__dirname, "../template/background"),
+        to: path.resolve(__dirname, "../dist/background")
       }
     ])
   ]
