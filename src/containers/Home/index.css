@@ -14,3 +14,28 @@
   justify-content: center;
   margin-top: 200px;
 }
+
+.time-ranges {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.time-ranges button {
+  margin: 0 0.5rem;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  border: 1px solid #ee4d2d;
+  color: #ee4d2d;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+.time-ranges button.selected {
+  background-color: #ee4d2d;
+  color: #ffffff;
+}

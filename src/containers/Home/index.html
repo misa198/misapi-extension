@@ -2,7 +2,24 @@
   <div class="loading-container" v-if="isLoading">
     <Loading />
   </div>
-  <div class="chart-container">
-    <Chart v-if="!error && dataChart.datasets" v-bind:dataChart="dataChart" />
+  <div class="chart-container" v-if="!error && dataChart.datasets">
+    <Chart v-bind:dataChart="dataChart" />
+    <div class="time-ranges">
+      <button>
+        1 tháng
+      </button>
+      <button>
+        3 tháng
+      </button>
+      <button>
+        6 tháng
+      </button>
+      <button>
+        9 tháng
+      </button>
+      <button>
+        12 tháng
+      </button>
+    </div>
   </div>
 </div>
