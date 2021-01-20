@@ -10,8 +10,9 @@
 
 ## Mô tả
 
-MisaPi là tiện ích giúp theo dõi biến động giá 1 sản phẩm trên shopee.vn trong thời gian tối đa là 1 năm.
-Phiên bản web có tại:&nbsp;&nbsp;<a href="https://misapi.tk" target="blank">MisaPi</a>
+<p>MisaPi là tiện ích giúp theo dõi biến động giá 1 sản phẩm trên shopee.vn trong thời gian tối đa là 1 năm.
+Phiên bản web có tại:&nbsp;&nbsp;<a href="https://misapi.tk" target="blank">MisaPi</a>.</p>
+<p>Tiện ích dành cho các trình duyệt nhân <a href="https://github.com/chromium/chromium">Chromium</a> (Google Chrome, Microsoft Edge Chromium, Opera, Brave,...).</p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/misa198/misapi-extension/master/readme/images/screenshot-1.png?token=AMIRKUF4RQYZOKKN2JTGWSTACENKG" />
