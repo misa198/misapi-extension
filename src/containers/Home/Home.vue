@@ -8,11 +8,13 @@ export default {
     return {
       error: "",
       isLoading: true,
-      data: {}
+      resData: {},
+      dataChart: {},
+      timeRange: 12
     };
   },
   created() {
-    const data = this.data;
+    const that = this;
     chrome.tabs.query(
       {
         active: true,
@@ -22,18 +24,18 @@ export default {
         let url = tabs[0].url;
 
         if (!url) {
-          data.error = "URL sản phẩm không hợp lệ";
+          that.error = "URL sản phẩm không hợp lệ";
         } else {
           let shopId = "";
           let itemId = "";
           const _url = url.split("?")[0] ? url.split("?")[0] : "";
-          if (!_url.match(urlRegex)) data.error = "URL sản phẩm không hợp lệ";
+          if (!_url.match(urlRegex)) that.error = "URL sản phẩm không hợp lệ";
           const urlPaths = _url.split("/");
           if (urlPaths[3] === "product") {
             shopId = urlPaths[4];
             itemId = urlPaths[5];
           } else {
-            if (!urlPaths[3]) data.error = "URL sản phẩm không hợp lệ";
+            if (!urlPaths[3]) that.error = "URL sản phẩm không hợp lệ";
             else {
               const pathPaths = urlPaths[3].split(".");
               shopId = pathPaths[pathPaths.length - 2];
@@ -41,24 +43,62 @@ export default {
             }
           }
 
-          if (!shopId || !itemId) data.error = "URL sản phẩm không hợp lệ";
-          if (!data.error) {
+          if (!shopId || !itemId) that.error = "URL sản phẩm không hợp lệ";
+          if (!that.error) {
             fetch(`https:/misapi.tk/statistic?id=${itemId}_${shopId}`)
               .then(res => res.json())
               .then(res => {
-                data.isLoading = false;
+                that.isLoading = false;
                 if (!res.error) {
-                  data.data = res.data;
+                  that.resData = Object.assign({}, that.resData, res.data);
                 } else {
-                  data.error = "Không có dữ liệu về sản phẩm này";
+                  that.error = "Không có dữ liệu về sản phẩm này";
                 }
               });
           } else {
-            data.isLoading = false;
+            that.isLoading = false;
           }
         }
       }
     );
+  },
+  computed: {
+    combined() {
+      return this.resData || this.timeRange;
+    }
+  },
+  watch: {
+    combined() {
+      const that = this;
+      const data = that.resData;
+      if (data.statistic) {
+        const time = data.statistic.time;
+        let minTime = new Date().getTime();
+        minTime = minTime - 1000 * 60 * 60 * 24 * 35 * timeRange;
+        const labels = [];
+        const selectedPrice = [];
+        for (const [index, e] of time.entries()) {
+          if (e >= minTime) {
+            labels.push(dateFormat(new Date(e), "dd-mm-yyyy"));
+            selectedPrice.push(data.statistic.price[index]);
+          }
+        }
+        const datasets = [
+          {
+            label: "Giá sản phẩm",
+            data: selectedPrice,
+            fill: false,
+            backgroundColor: "#ee4d2d",
+            borderColor: "#ee4d2d40"
+          }
+        ];
+        setDataChart({ labels, datasets });
+        that.dataChart = Object.assign({}, that.dataChart, {
+          labels,
+          datasets
+        });
+      }
+    }
   }
 };
 </script>
