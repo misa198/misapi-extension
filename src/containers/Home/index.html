@@ -5,19 +5,34 @@
   <div class="chart-container" v-if="!error && dataChart.datasets">
     <Chart v-bind:dataChart="dataChart" />
     <div class="time-ranges">
-      <button>
+      <button
+        v-bind:class="{selected: timeRange === 1}"
+        v-on:click="changeTimeRange(1)"
+      >
         1 tháng
       </button>
-      <button>
+      <button
+        v-bind:class="{selected: timeRange === 3}"
+        v-on:click="changeTimeRange(3)"
+      >
         3 tháng
       </button>
-      <button>
+      <button
+        v-bind:class="{selected: timeRange === 6}"
+        v-on:click="changeTimeRange(6)"
+      >
         6 tháng
       </button>
-      <button>
+      <button
+        v-bind:class="{selected: timeRange === 9}"
+        v-on:click="changeTimeRange(9)"
+      >
         9 tháng
       </button>
-      <button>
+      <button
+        v-bind:class="{selected: timeRange === 12}"
+        v-on:click="changeTimeRange(12)"
+      >
         12 tháng
       </button>
     </div>

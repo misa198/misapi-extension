@@ -76,8 +76,13 @@ export default {
       return this.resData || this.timeRange;
     }
   },
+  methods: {
+    changeTimeRange(value) {
+      this.timeRange = value;
+    }
+  },
   watch: {
-    combined() {
+    combined(value) {
       const that = this;
       const data = that.resData;
       if (data.statistic) {
