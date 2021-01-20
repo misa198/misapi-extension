@@ -1,5 +1,7 @@
 <script>
-import { Line } from "vue-chartjs";
+import { Line, mixins } from "vue-chartjs";
+
+const { reactiveProp } = mixins;
 
 const options = {
   scales: {
@@ -39,8 +41,14 @@ const options = {
 export default {
   extends: Line,
   props: ["dataChart"],
+  mixins: [reactiveProp],
   mounted() {
     this.renderChart(this.dataChart, options);
+  },
+  watch: {
+    dataChart() {
+      this.renderChart(this.dataChart, options);
+    }
   }
 };
 </script>

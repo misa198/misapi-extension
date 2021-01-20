@@ -79,11 +79,8 @@ export default {
   methods: {
     changeTimeRange(value) {
       this.timeRange = value;
-    }
-  },
-  watch: {
-    combined(value) {
-      const that = this;
+    },
+    changeDatasets(that) {
       const data = that.resData;
       if (data.statistic) {
         const time = data.statistic.time;
@@ -111,6 +108,16 @@ export default {
           datasets
         });
       }
+    }
+  },
+  watch: {
+    resData() {
+      const that = this;
+      this.changeDatasets(that);
+    },
+    timeRange() {
+      const that = this;
+      this.changeDatasets(that);
     }
   }
 };
