@@ -1,18 +1,19 @@
 <template>
   <div id="app">
     <Header />
+    <Home />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
-import Loading from "./components/Loading";
+import Home from "./containers/Home/Home";
 
 export default {
   name: "App",
   components: {
     Header,
-    Loading
+    Home
   }
 };
 </script>
