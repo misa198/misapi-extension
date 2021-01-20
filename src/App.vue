@@ -19,6 +19,11 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,6 +31,5 @@ export default {
   color: #2c3e50;
   width: 512px;
   height: 580px;
-  /* border: 1px solid black; */
 }
 </style>
