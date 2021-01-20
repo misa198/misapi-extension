@@ -1,4 +1,7 @@
 <div class="home">
+  <div class="loading-container" v-if="isLoading">
+    <Loading />
+  </div>
   <div class="chart-container">
     <Chart v-if="!error && dataChart.datasets" v-bind:dataChart="dataChart" />
   </div>

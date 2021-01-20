@@ -8,3 +8,9 @@
   width: 450px;
   margin-right: 8px;
 }
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}

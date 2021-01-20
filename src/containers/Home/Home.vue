@@ -4,12 +4,14 @@
 import dateFormat from "dateformat";
 
 import Chart from "../../components/Chart";
+import Loading from "../../components/Loading";
 
 import { urlRegex } from "../../constants/regex";
 
 export default {
   components: {
-    Chart
+    Chart,
+    Loading
   },
   data() {
     return {
