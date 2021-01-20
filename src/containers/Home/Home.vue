@@ -1,9 +1,16 @@
 <template src="./index.html"></template>
 
 <script>
+import dateFormat from "dateformat";
+
+import Chart from "../../components/Chart";
+
 import { urlRegex } from "../../constants/regex";
 
 export default {
+  components: {
+    Chart
+  },
   data() {
     return {
       error: "",
@@ -74,7 +81,7 @@ export default {
       if (data.statistic) {
         const time = data.statistic.time;
         let minTime = new Date().getTime();
-        minTime = minTime - 1000 * 60 * 60 * 24 * 35 * timeRange;
+        minTime = minTime - 1000 * 60 * 60 * 24 * 35 * that.timeRange;
         const labels = [];
         const selectedPrice = [];
         for (const [index, e] of time.entries()) {
@@ -92,7 +99,6 @@ export default {
             borderColor: "#ee4d2d40"
           }
         ];
-        setDataChart({ labels, datasets });
         that.dataChart = Object.assign({}, that.dataChart, {
           labels,
           datasets

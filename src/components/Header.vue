@@ -16,15 +16,15 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 0.5rem 0;
+  padding: 8px 0;
 }
 
 .header .logo {
-  height: 50px;
+  height: 40px;
   margin-right: 0.5rem;
 }
 
 .header .logo-text {
-  height: 40px;
+  height: 30px;
 }
 </style>

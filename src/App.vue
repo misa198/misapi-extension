@@ -24,8 +24,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  width: 500px;
-  height: 500px;
-  border: 1px solid black;
+  width: 512px;
+  height: 580px;
+  /* border: 1px solid black; */
 }
 </style>

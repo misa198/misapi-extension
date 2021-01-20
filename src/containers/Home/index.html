@@ -1,3 +1,5 @@
 <div class="home">
-  {{ data }} {{error}} {{isLoading}}
+  <div class="chart-container">
+    <Chart v-if="!error && dataChart.datasets" v-bind:dataChart="dataChart" />
+  </div>
 </div>

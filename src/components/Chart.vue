@@ -38,9 +38,9 @@ const options = {
 
 export default {
   extends: Line,
-  props: ["chartdata"],
+  props: ["dataChart"],
   mounted() {
-    this.renderChart(this.chartdata, options);
+    this.renderChart(this.dataChart, options);
   }
 };
 </script>
