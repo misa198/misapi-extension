@@ -1,21 +1,14 @@
-# misapi-extension
+# MisaPi Extension
 
-> Misapi
+<p align="center">
+  <img src="https://raw.githubusercontent.com/misa198/misapi-extension/master/src/assets/logo.png?token=AMIRKUFJCB5LZA26KUUB7CLACEL6W" width="100px" />
+  <img src="https://raw.githubusercontent.com/misa198/misapi-extension/master/src/assets/logo-text.png?token=AMIRKUFEPB6IUZX55HZGES3ACEMHW" height="90px" />
+  <p align="center" style="font-size: 20px; color: #FF641A">
+    Theo dõi biến động giá sản phẩm trên Shopee.vn
+  </p>
+</p>
 
-## Build Setup
+## Mô tả
+MisaPi là tiện ích giúp theo dõi biến động giá 1 sản phẩm trên shopee.vn trong thời gian tối đa là 1 năm.
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Cài đặt
