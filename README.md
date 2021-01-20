@@ -18,3 +18,9 @@ Phiên bản web có tại:&nbsp;&nbsp;<a href="https://misapi.tk" target="blank
 </p>
 
 ## Cài đặt
+
+- Tải về phiên bản mới nhất tại <a href="https://github.com/misa198/misapi-extension/releases">đây</a>.
+- Giải nén tệp vừa tải.
+- Đi đến trang quản lý extension của trình duyệt.
+- Bật chế độ dành cho nhà phát triển.
+- Chọn "Tải tiện ích đã giải nén" và điều hướng đến thư mục vừa giải nén.
