@@ -39,3 +39,9 @@
   background-color: #ee4d2d;
   color: #ffffff;
 }
+
+.error {
+  margin-top: 200px;
+  font-size: 1.2rem;
+  color: #ff641a;
+}
