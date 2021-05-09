@@ -15,7 +15,7 @@ Phiên bản web có tại:&nbsp;&nbsp;<a href="https://misapi.tk" target="blank
 <p>Tiện ích dành cho các trình duyệt nhân <a href="https://github.com/chromium/chromium">Chromium</a> (Google Chrome, Microsoft Edge Chromium, Opera, Brave,...).</p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/misa198/misapi-extension/master/readme/images/screenshot-1.png?token=AMIRKUF4RQYZOKKN2JTGWSTACENKG" />
+  <img src="./docs/images/screenshot.gif" />
 </p>
 
 ## Cài đặt
